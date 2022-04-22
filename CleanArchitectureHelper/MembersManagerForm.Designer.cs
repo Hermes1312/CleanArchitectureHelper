@@ -47,6 +47,7 @@ partial class MembersManagerForm
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.AnimationInterval = 200;
             this.guna2BorderlessForm1.BorderRadius = 2;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
@@ -102,6 +103,7 @@ partial class MembersManagerForm
             this.membersTextBox.CharWidth = 8;
             this.membersTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.membersTextBox.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.membersTextBox.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.membersTextBox.IsReplaceMode = false;
             this.membersTextBox.Location = new System.Drawing.Point(15, 53);
             this.membersTextBox.Name = "membersTextBox";
