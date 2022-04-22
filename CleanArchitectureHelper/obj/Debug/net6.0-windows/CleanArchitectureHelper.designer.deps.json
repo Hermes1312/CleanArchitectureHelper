@@ -1,0 +1,43 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "FastColoredTextBox.Net5/2.16.26": {
+        "runtime": {
+          "lib/net5.0-windows7.0/FastColoredTextBox.dll": {
+            "assemblyVersion": "2.16.26.0",
+            "fileVersion": "2.16.26.0"
+          }
+        }
+      },
+      "Guna.UI2.WinForms/2.0.3.2": {
+        "runtime": {
+          "lib/net40/Guna.UI2.dll": {
+            "assemblyVersion": "2.0.3.2",
+            "fileVersion": "2.0.3.2"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FastColoredTextBox.Net5/2.16.26": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tpeFJ0cNgO6RmEAl6M3A8wAXdycmqMk6rdZMe/DHNkQ4Yh5kgPHa8AdWp1SCxoswKm3QdQkDM7TW8mgraYjjxA==",
+      "path": "fastcoloredtextbox.net5/2.16.26",
+      "hashPath": "fastcoloredtextbox.net5.2.16.26.nupkg.sha512"
+    },
+    "Guna.UI2.WinForms/2.0.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eemzZE4IrzNrC1Ln6KYVH0r8S8bYWUW0tu7VNXzR6d/WMu0sgTZmrp86r/vIuL1aoPESLMQnycpNbtPv2cjeQA==",
+      "path": "guna.ui2.winforms/2.0.3.2",
+      "hashPath": "guna.ui2.winforms.2.0.3.2.nupkg.sha512"
+    }
+  }
+}
