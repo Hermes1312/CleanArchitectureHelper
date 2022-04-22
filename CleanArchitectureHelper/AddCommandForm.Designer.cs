@@ -56,6 +56,7 @@ partial class AddCommandForm
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.ManageInterfacesButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.commandTextBox)).BeginInit();
             this.SuspendLayout();
@@ -205,7 +206,6 @@ partial class AddCommandForm
             this.commandTextBox.CharWidth = 8;
             this.commandTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.commandTextBox.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.commandTextBox.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.commandTextBox.IsReplaceMode = false;
             this.commandTextBox.Language = FastColoredTextBoxNS.Language.CSharp;
             this.commandTextBox.LeftBracket = '(';
@@ -407,12 +407,27 @@ partial class AddCommandForm
             this.ManageInterfacesButton.Text = "MANAGE DI";
             this.ManageInterfacesButton.Click += new System.EventHandler(this.ManageInterfacesButton_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.label8.Location = new System.Drawing.Point(33, -1);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(25, 7, 25, 7);
+            this.label8.Size = new System.Drawing.Size(137, 29);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Add command";
+            // 
             // AddCommandForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(910, 647);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ManageInterfacesButton);
             this.Controls.Add(this.label6);
@@ -470,4 +485,5 @@ partial class AddCommandForm
     private FastColoredTextBoxNS.FastColoredTextBox commandTextBox;
     private Label label7;
     private Guna.UI2.WinForms.Guna2GradientButton ManageInterfacesButton;
+    private Label label8;
 }

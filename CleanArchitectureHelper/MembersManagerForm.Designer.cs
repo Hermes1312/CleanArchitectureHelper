@@ -40,6 +40,7 @@ partial class MembersManagerForm
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.saveButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.membersTextBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,7 +102,6 @@ partial class MembersManagerForm
             this.membersTextBox.CharWidth = 8;
             this.membersTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.membersTextBox.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.membersTextBox.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.membersTextBox.IsReplaceMode = false;
             this.membersTextBox.Location = new System.Drawing.Point(15, 53);
             this.membersTextBox.Name = "membersTextBox";
@@ -160,12 +160,27 @@ partial class MembersManagerForm
             this.saveButton.Text = "SAVE";
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.label8.Location = new System.Drawing.Point(12, 0);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(25, 7, 25, 7);
+            this.label8.Size = new System.Drawing.Size(157, 29);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Members manager";
+            // 
             // MembersManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(368, 544);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -191,4 +206,5 @@ partial class MembersManagerForm
     private Label label2;
     private Label label1;
     private Guna.UI2.WinForms.Guna2GradientButton saveButton;
+    private Label label8;
 }

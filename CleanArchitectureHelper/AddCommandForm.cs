@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using FastColoredTextBoxNS;
+using Guna.UI2.WinForms;
 using Char = System.Char;
 
 namespace CleanArchitectureHelper;
@@ -29,6 +30,31 @@ public partial class AddCommandForm : Form
         if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
         var path = $"{dir}{NameTextBox.Text}CommandHandler.cs";
         File.WriteAllText(path, commandTextBox.Text);
+
+        if (File.Exists(path))
+        {
+            new Guna2MessageDialog()
+            {
+                Buttons = MessageDialogButtons.OK,
+                Caption = "Succeed",
+                Icon = MessageDialogIcon.Information,
+                Parent = this,
+                Style = MessageDialogStyle.Light,
+                Text = "Successfully added new command! END"
+            }.Show();
+        }
+        else
+        {
+            new Guna2MessageDialog()
+            {
+                Buttons = MessageDialogButtons.OK,
+                Caption = "Error",
+                Icon = MessageDialogIcon.Error,
+                Parent = this,
+                Style = MessageDialogStyle.Light,
+                Text = "Something went wrong! END"
+            }.Show();
+        }
     }
 
 
@@ -83,6 +109,7 @@ public partial class AddCommandForm : Form
         commandBodyCode = commandBodyCode.Replace("[[COMMAND]]", commandCode);
         commandBodyCode = commandBodyCode.Replace("[[NAME]]", NameTextBox.Text);
         commandBodyCode = commandBodyCode.Replace("[[RETURN]]", string.IsNullOrEmpty(ReturnTextBox.Text) ? "Unit" : $"{ReturnTextBox.Text}");
+        commandBodyCode = commandBodyCode.Replace("[[RETURN2]]", string.IsNullOrEmpty(ReturnTextBox.Text) ? "" : $", {ReturnTextBox.Text}");
 
         commandTextBox.Text = commandBodyCode;
     }

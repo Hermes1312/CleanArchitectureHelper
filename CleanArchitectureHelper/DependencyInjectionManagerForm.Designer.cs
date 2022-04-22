@@ -39,12 +39,14 @@ partial class DependencyInjectionManagerForm
             this.InterfacesTextBox = new FastColoredTextBoxNS.FastColoredTextBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.InterfacesTextBox)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.AnimationInterval = 200;
             this.guna2BorderlessForm1.BorderRadius = 2;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
@@ -147,12 +149,27 @@ partial class DependencyInjectionManagerForm
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 27);
             this.guna2ControlBox1.TabIndex = 29;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.label8.Location = new System.Drawing.Point(14, 0);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(25, 7, 25, 7);
+            this.label8.Size = new System.Drawing.Size(120, 29);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "DI Manager";
+            // 
             // DependencyInjectionManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(353, 517);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.InterfacesTextBox);
@@ -176,4 +193,5 @@ partial class DependencyInjectionManagerForm
     private FastColoredTextBoxNS.FastColoredTextBox InterfacesTextBox;
     private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
     private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+    private Label label8;
 }

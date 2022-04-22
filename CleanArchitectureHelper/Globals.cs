@@ -25,7 +25,7 @@ namespace [[PREFIX]].Application.[[AREA]].[[FOLDER_NAME]].Commands;
 
 [[COMMAND]]
 
-public class [[NAME]]CommandHandler : IRequestHandler<[[NAME]]Command>
+public class [[NAME]]CommandHandler : IRequestHandler<[[NAME]]Command[[RETURN2]]>
 {{
 [[DI_PROPS]]
 
