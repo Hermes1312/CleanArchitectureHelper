@@ -35,37 +35,47 @@ public partial class AddQueryForm : Form
             _plainParameters.Remove("string SearchPhrase");
     }
 
-    private void AddCommandButton_Click(object sender, EventArgs e)
+    private void AddQueryButton_Click(object sender, EventArgs e)
     {
-        var dir = $"{Globals.ProjectModel!.DirectoryPath}\\{Globals.ProjectModel.Prefix}.Application.{AreasComboBox.Text}\\{FolderNameTextBox.Text}\\Commands\\";
-        if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
-        var path = $"{dir}{NameTextBox.Text}CommandHandler.cs";
-        File.WriteAllText(path, QueryHandlerTextBox.Text);
-
-        if (File.Exists(path))
+        new Guna2MessageDialog()
         {
-            new Guna2MessageDialog()
-            {
-                Buttons = MessageDialogButtons.OK,
-                Caption = "Succeed",
-                Icon = MessageDialogIcon.Information,
-                Parent = this,
-                Style = MessageDialogStyle.Light,
-                Text = "Successfully added new query! END"
-            }.Show();
-        }
-        else
-        {
-            new Guna2MessageDialog()
-            {
-                Buttons = MessageDialogButtons.OK,
-                Caption = "Error",
-                Icon = MessageDialogIcon.Error,
-                Parent = this,
-                Style = MessageDialogStyle.Light,
-                Text = "Something went wrong! END"
-            }.Show();
-        }
+            Buttons = MessageDialogButtons.OK,
+            Caption = "Chuj",
+            Icon = MessageDialogIcon.Information,
+            Parent = this,
+            Style = MessageDialogStyle.Light,
+            Text = "Juz mnie sie nie chciało! END"
+        }.Show();
+        
+        // var dir = $"{Globals.ProjectModel!.DirectoryPath}\\{Globals.ProjectModel.Prefix}.Application.{AreasComboBox.Text}\\{FolderNameTextBox.Text}\\Commands\\";
+        // if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+        // var path = $"{dir}{NameTextBox.Text}CommandHandler.cs";
+        // File.WriteAllText(path, QueryHandlerTextBox.Text);
+        //
+        // if (File.Exists(path))
+        // {
+        //     new Guna2MessageDialog()
+        //     {
+        //         Buttons = MessageDialogButtons.OK,
+        //         Caption = "Succeed",
+        //         Icon = MessageDialogIcon.Information,
+        //         Parent = this,
+        //         Style = MessageDialogStyle.Light,
+        //         Text = "Successfully added new query! END"
+        //     }.Show();
+        // }
+        // else
+        // {
+        //     new Guna2MessageDialog()
+        //     {
+        //         Buttons = MessageDialogButtons.OK,
+        //         Caption = "Error",
+        //         Icon = MessageDialogIcon.Error,
+        //         Parent = this,
+        //         Style = MessageDialogStyle.Light,
+        //         Text = "Something went wrong! END"
+        //     }.Show();
+        // }
     }
 
 

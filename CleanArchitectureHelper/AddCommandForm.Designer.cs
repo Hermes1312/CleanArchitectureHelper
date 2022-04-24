@@ -99,7 +99,7 @@ partial class AddCommandForm
             // AddCommandButton
             // 
             this.AddCommandButton.Animated = true;
-            this.AddCommandButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AddCommandButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.AddCommandButton.BorderRadius = 1;
             this.AddCommandButton.BorderThickness = 1;
             this.AddCommandButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -135,7 +135,7 @@ partial class AddCommandForm
             // AreasComboBox
             // 
             this.AreasComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.AreasComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AreasComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.AreasComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.AreasComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.AreasComboBox.FillColor = System.Drawing.Color.WhiteSmoke;
@@ -152,7 +152,7 @@ partial class AddCommandForm
             // GenerateCommandButton
             // 
             this.GenerateCommandButton.Animated = true;
-            this.GenerateCommandButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.GenerateCommandButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.GenerateCommandButton.BorderRadius = 1;
             this.GenerateCommandButton.BorderThickness = 1;
             this.GenerateCommandButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -226,7 +226,7 @@ partial class AddCommandForm
             this.FolderNameTextBox.Location = new System.Drawing.Point(33, 593);
             this.FolderNameTextBox.Name = "FolderNameTextBox";
             this.FolderNameTextBox.Size = new System.Drawing.Size(185, 23);
-            this.FolderNameTextBox.TabIndex = 23;
+            this.FolderNameTextBox.TabIndex = 0;
             // 
             // label2
             // 
@@ -241,7 +241,7 @@ partial class AddCommandForm
             // ManageMembersButton
             // 
             this.ManageMembersButton.Animated = true;
-            this.ManageMembersButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ManageMembersButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.ManageMembersButton.BorderRadius = 1;
             this.ManageMembersButton.BorderThickness = 1;
             this.ManageMembersButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -316,7 +316,7 @@ partial class AddCommandForm
             this.ReturnTextBox.Name = "ReturnTextBox";
             this.ReturnTextBox.PlaceholderText = "Unit";
             this.ReturnTextBox.Size = new System.Drawing.Size(127, 23);
-            this.ReturnTextBox.TabIndex = 29;
+            this.ReturnTextBox.TabIndex = 3;
             // 
             // label5
             // 
@@ -331,7 +331,7 @@ partial class AddCommandForm
             // ManageUsingsButton
             // 
             this.ManageUsingsButton.Animated = true;
-            this.ManageUsingsButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ManageUsingsButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.ManageUsingsButton.BorderRadius = 1;
             this.ManageUsingsButton.BorderThickness = 1;
             this.ManageUsingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -369,7 +369,7 @@ partial class AddCommandForm
             this.NameTextBox.Location = new System.Drawing.Point(224, 593);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(162, 23);
-            this.NameTextBox.TabIndex = 33;
+            this.NameTextBox.TabIndex = 1;
             // 
             // label7
             // 
@@ -384,7 +384,7 @@ partial class AddCommandForm
             // ManageInterfacesButton
             // 
             this.ManageInterfacesButton.Animated = true;
-            this.ManageInterfacesButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ManageInterfacesButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.ManageInterfacesButton.BorderRadius = 1;
             this.ManageInterfacesButton.BorderThickness = 1;
             this.ManageInterfacesButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -410,7 +410,7 @@ partial class AddCommandForm
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));

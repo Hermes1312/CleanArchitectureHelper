@@ -1,7 +1,5 @@
-﻿using System.Windows.Forms;
-using FastColoredTextBoxNS;
+﻿using CleanArchitectureHelper.ManagerForms;
 using Guna.UI2.WinForms;
-using Char = System.Char;
 
 namespace CleanArchitectureHelper;
 
@@ -18,7 +16,7 @@ public partial class AddCommandForm : Form
         AreasComboBox.Items.AddRange(Globals.ProjectModel!.Areas.ToArray());
     }
 
-    private void ManageMembersButton_Click(object sender, EventArgs e) => new MembersManagerForm(_plainMembers).ShowDialog();
+    private void ManageMembersButton_Click(object sender, EventArgs e) => new ParametersManagerForm(_plainMembers).ShowDialog();
 
     private void ManageUsingsButton_Click(object sender, EventArgs e) => new UsingsManagerForm(_plainUsings).ShowDialog();
 
@@ -60,11 +58,11 @@ public partial class AddCommandForm : Form
 
     private void GenerateCommandButton_Click(object sender, EventArgs e)
     {
-        var commandBodyCode = Globals.CommandBodyPatternCtorMembers;
+        var handlerCode = Globals.CQHandlerPattern;
         
         var commandCode = CtorMembersCheckBox.Checked
-            ? Globals.CommandPatternCtorMembers
-            : Globals.CommandPatternMembers;
+            ? Globals.CQRecordCtorPattern
+            : Globals.CQRecordPattern;
 
         if (CtorMembersCheckBox.Checked)
         {
@@ -77,11 +75,14 @@ public partial class AddCommandForm : Form
         {
             commandCode = commandCode.Replace("[[NAME]]", NameTextBox.Text);
             commandCode = commandCode.Replace("[[RETURN]]", string.IsNullOrEmpty(ReturnTextBox.Text) ? "" : $"<{ReturnTextBox.Text}>");
-            
-            var members = string.Join(Environment.NewLine, _plainMembers.Select(a => $"\tpublic {a} {{ get; init; }}").ToArray());
+            var membersList = (from plainMember in _plainMembers let memberString = $"\tpublic {plainMember} {{ get; init; }}" select memberString + (plainMember[..4] == "List" ? " = new();" : "")).ToList();
+            var members = string.Join(Environment.NewLine, membersList);
             commandCode = commandCode.Replace("[[MEMBERS]]", members);
         }
 
+        commandCode = commandCode.Replace("[[QC]]", "Command");
+        commandCode = commandCode.Replace("[[PAGINATION]]", "");
+        
         List<string> diProps = new(), diCtor = new(), diAssign = new();
 
         foreach (var plainInterface in _plainInterfaces)
@@ -98,19 +99,23 @@ public partial class AddCommandForm : Form
             diProps.Add($"\tprivate readonly {plainInterface} {name};");
         }
 
-        commandBodyCode = commandBodyCode.Replace("[[DI_PROPS]]", string.Join(Environment.NewLine, diProps));
-        commandBodyCode = commandBodyCode.Replace("[[DI_ASSIGN]]", string.Join(Environment.NewLine, diAssign));
-        commandBodyCode = commandBodyCode.Replace("[[DI_CTOR]]", string.Join(',', diCtor));
+        handlerCode = handlerCode.Replace("[[DI_PROPS]]", string.Join(Environment.NewLine, diProps));
+        handlerCode = handlerCode.Replace("[[DI_ASSIGN]]", string.Join(Environment.NewLine, diAssign));
+        handlerCode = handlerCode.Replace("[[DI_CTOR]]", string.Join(',', diCtor));
+        handlerCode = handlerCode.Replace("[[QC2]]", "Commands");
+        handlerCode = handlerCode.Replace("[[QC]]", "Command");
+        handlerCode = handlerCode.Replace("[[PAGINATION]]", "");
+        handlerCode = handlerCode.Replace("[[LAYER]]", "Application");
 
-        commandBodyCode = commandBodyCode.Replace("[[PREFIX]]", Globals.ProjectModel!.Prefix);
-        commandBodyCode = commandBodyCode.Replace("[[USINGS]]", string.Join(Environment.NewLine, _plainUsings.Select(u => $"using {u};").ToArray()));
-        commandBodyCode = commandBodyCode.Replace("[[AREA]]", AreasComboBox.Text);
-        commandBodyCode = commandBodyCode.Replace("[[FOLDER_NAME]]", FolderNameTextBox.Text);
-        commandBodyCode = commandBodyCode.Replace("[[COMMAND]]", commandCode);
-        commandBodyCode = commandBodyCode.Replace("[[NAME]]", NameTextBox.Text);
-        commandBodyCode = commandBodyCode.Replace("[[RETURN]]", string.IsNullOrEmpty(ReturnTextBox.Text) ? "Unit" : $"{ReturnTextBox.Text}");
-        commandBodyCode = commandBodyCode.Replace("[[RETURN2]]", string.IsNullOrEmpty(ReturnTextBox.Text) ? "" : $", {ReturnTextBox.Text}");
+        handlerCode = handlerCode.Replace("[[PREFIX]]", Globals.ProjectModel!.Prefix);
+        handlerCode = handlerCode.Replace("[[USINGS]]", string.Join(Environment.NewLine, _plainUsings.Select(u => $"using {u};").ToArray()));
+        handlerCode = handlerCode.Replace("[[AREA]]", AreasComboBox.Text);
+        handlerCode = handlerCode.Replace("[[FOLDER_NAME]]", FolderNameTextBox.Text);
+        handlerCode = handlerCode.Replace("[[COMMAND]]", commandCode);
+        handlerCode = handlerCode.Replace("[[NAME]]", NameTextBox.Text);
+        handlerCode = handlerCode.Replace("[[RETURN]]", string.IsNullOrEmpty(ReturnTextBox.Text) ? "Unit" : $"{ReturnTextBox.Text}");
+        handlerCode = handlerCode.Replace("[[RETURN2]]", string.IsNullOrEmpty(ReturnTextBox.Text) ? "" : $", {ReturnTextBox.Text}");
 
-        commandTextBox.Text = commandBodyCode;
+        commandTextBox.Text = handlerCode;
     }
 }

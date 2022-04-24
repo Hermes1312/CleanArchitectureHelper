@@ -128,7 +128,7 @@ partial class AddQueryForm
             this.AddCommandButton.Size = new System.Drawing.Size(125, 45);
             this.AddCommandButton.TabIndex = 20;
             this.AddCommandButton.Text = "ADD QUERY";
-            this.AddCommandButton.Click += new System.EventHandler(this.AddCommandButton_Click);
+            this.AddCommandButton.Click += new System.EventHandler(this.AddQueryButton_Click);
             // 
             // label1
             // 
