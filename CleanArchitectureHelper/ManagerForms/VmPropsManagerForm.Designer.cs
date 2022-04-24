@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 
-namespace CleanArchitectureHelper;
+namespace CleanArchitectureHelper.ManagerForms;
 
-partial class MembersManagerForm
+partial class VmPropsManagerForm
 {
     /// <summary>
     /// Required designer variable.
@@ -32,16 +32,15 @@ partial class MembersManagerForm
     private void InitializeComponent()
     {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MembersManagerForm));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.membersTextBox = new FastColoredTextBoxNS.FastColoredTextBox();
+            this.propsTextBox = new FastColoredTextBoxNS.FastColoredTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.saveButton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.membersTextBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propsTextBox)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -62,7 +61,7 @@ partial class MembersManagerForm
             this.guna2ControlBox2.FillColor = System.Drawing.SystemColors.ControlLightLight;
             this.guna2ControlBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.guna2ControlBox2.Location = new System.Drawing.Point(275, 0);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(260, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 27);
             this.guna2ControlBox2.TabIndex = 14;
@@ -75,15 +74,15 @@ partial class MembersManagerForm
             this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.ControlLightLight;
             this.guna2ControlBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.guna2ControlBox1.Location = new System.Drawing.Point(320, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(305, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 27);
             this.guna2ControlBox1.TabIndex = 13;
             this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
-            // membersTextBox
+            // propsTextBox
             // 
-            this.membersTextBox.AutoCompleteBracketsList = new char[] {
+            this.propsTextBox.AutoCompleteBracketsList = new char[] {
         '(',
         ')',
         '{',
@@ -94,25 +93,24 @@ partial class MembersManagerForm
         '\"',
         '\'',
         '\''};
-            this.membersTextBox.AutoIndentCharsPatterns = "^\\s*[\\w\\.]+(\\s\\w+)?\\s*(?<range>=)\\s*(?<range>[^;=]+);\r\n^\\s*(case|default)\\s*[^:]*" +
+            this.propsTextBox.AutoIndentCharsPatterns = "^\\s*[\\w\\.]+(\\s\\w+)?\\s*(?<range>=)\\s*(?<range>[^;=]+);\r\n^\\s*(case|default)\\s*[^:]*" +
     "(?<range>:)\\s*(?<range>[^;]+);";
-            this.membersTextBox.AutoScrollMinSize = new System.Drawing.Size(27, 14);
-            this.membersTextBox.BackBrush = null;
-            this.membersTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.membersTextBox.CharHeight = 14;
-            this.membersTextBox.CharWidth = 8;
-            this.membersTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.membersTextBox.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.membersTextBox.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.membersTextBox.IsReplaceMode = false;
-            this.membersTextBox.Location = new System.Drawing.Point(15, 53);
-            this.membersTextBox.Name = "membersTextBox";
-            this.membersTextBox.Paddings = new System.Windows.Forms.Padding(0);
-            this.membersTextBox.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.membersTextBox.ServiceColors = ((FastColoredTextBoxNS.ServiceColors)(resources.GetObject("membersTextBox.ServiceColors")));
-            this.membersTextBox.Size = new System.Drawing.Size(335, 361);
-            this.membersTextBox.TabIndex = 15;
-            this.membersTextBox.Zoom = 100;
+            this.propsTextBox.AutoScrollMinSize = new System.Drawing.Size(27, 14);
+            this.propsTextBox.BackBrush = null;
+            this.propsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.propsTextBox.CharHeight = 14;
+            this.propsTextBox.CharWidth = 8;
+            this.propsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.propsTextBox.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.propsTextBox.IsReplaceMode = false;
+            this.propsTextBox.Location = new System.Drawing.Point(15, 53);
+            this.propsTextBox.Name = "propsTextBox";
+            this.propsTextBox.Paddings = new System.Windows.Forms.Padding(0);
+            this.propsTextBox.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.propsTextBox.ServiceColors = null;
+            this.propsTextBox.Size = new System.Drawing.Size(326, 361);
+            this.propsTextBox.TabIndex = 0;
+            this.propsTextBox.Zoom = 100;
             // 
             // label1
             // 
@@ -132,14 +130,14 @@ partial class MembersManagerForm
             this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(12, 417);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 19);
+            this.label2.Size = new System.Drawing.Size(171, 19);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Type each member in new line";
+            this.label2.Text = "Type each prop in new line";
             // 
             // saveButton
             // 
             this.saveButton.Animated = true;
-            this.saveButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.saveButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.saveButton.BorderRadius = 1;
             this.saveButton.BorderThickness = 1;
             this.saveButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -155,45 +153,45 @@ partial class MembersManagerForm
             this.saveButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.saveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.saveButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.saveButton.Location = new System.Drawing.Point(12, 493);
+            this.saveButton.Location = new System.Drawing.Point(12, 469);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(338, 36);
-            this.saveButton.TabIndex = 22;
+            this.saveButton.Size = new System.Drawing.Size(329, 36);
+            this.saveButton.TabIndex = 1;
             this.saveButton.Text = "SAVE";
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.label8.Location = new System.Drawing.Point(12, 0);
             this.label8.Name = "label8";
             this.label8.Padding = new System.Windows.Forms.Padding(25, 7, 25, 7);
-            this.label8.Size = new System.Drawing.Size(157, 29);
+            this.label8.Size = new System.Drawing.Size(159, 29);
             this.label8.TabIndex = 38;
-            this.label8.Text = "Members manager";
+            this.label8.Text = "VM Props Manager";
             // 
-            // MembersManagerForm
+            // VmPropsManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(368, 544);
+            this.ClientSize = new System.Drawing.Size(353, 517);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.membersTextBox);
+            this.Controls.Add(this.propsTextBox);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MembersManagerForm";
+            this.Name = "VmPropsManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Members Manager";
-            ((System.ComponentModel.ISupportInitialize)(this.membersTextBox)).EndInit();
+            this.Text = "VM Props Manager";
+            ((System.ComponentModel.ISupportInitialize)(this.propsTextBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,7 +202,7 @@ partial class MembersManagerForm
     private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
     private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-    private FastColoredTextBoxNS.FastColoredTextBox membersTextBox;
+    private FastColoredTextBoxNS.FastColoredTextBox propsTextBox;
     private Label label2;
     private Label label1;
     private Guna.UI2.WinForms.Guna2GradientButton saveButton;

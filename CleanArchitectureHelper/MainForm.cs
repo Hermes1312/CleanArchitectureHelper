@@ -24,7 +24,7 @@ public partial class Form1 : Form
         => CheckProjectLoaded(new AddCommandForm());
 
     private void AddQueryButton_Click(object sender, EventArgs e)
-        => CheckProjectLoaded(new ProjectSettingsForm());
+        => CheckProjectLoaded(new AddQueryForm());
     
     private void LoadProjectButton_Click(object sender, EventArgs e)
     {
@@ -66,7 +66,7 @@ public partial class Form1 : Form
             Name = name
         };
 
-        new ProjectSettingsForm().Show();
+        new ProjectSettingsForm(true).Show();
     }
 
     private void ProjectSettingsButton_Click(object sender, EventArgs e) 
@@ -89,6 +89,6 @@ public partial class Form1 : Form
             }.Show();
 
         else
-            form.ShowDialog();
+            form.Show();
     }
 }

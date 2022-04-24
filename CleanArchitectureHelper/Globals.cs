@@ -12,29 +12,33 @@ public static class Globals
 
         return str;
     }
-    
-    public static string CommandPatternCtorMembers { get; } = "public record [[NAME]]Command([[MEMBERS]]) : IRequest[[RETURN]];";
-    public static string CommandPatternMembers { get; } = @"public record [[NAME]]Command : IRequest[[RETURN]]
+
+    public static string RecordPattern { get; } = @"public record [[NAME]]
+{
+[[MEMBERS]]
+};";
+    public static string CQRecordCtorPattern { get; } = "public record [[NAME]][[QC]]([[MEMBERS]]) : [[PAGINATION]]IRequest[[RETURN]];";
+    public static string CQRecordPattern { get; } = @"public record [[NAME]][[QC]] : [[PAGINATION]]IRequest[[RETURN]]
 {
 [[MEMBERS]]
 }";
-    public static string CommandBodyPatternCtorMembers { get; } = @$"using MediatR;
+    public static string CQHandlerPattern { get; } = @$"using MediatR;
 [[USINGS]]
 
-namespace [[PREFIX]].Application.[[AREA]].[[FOLDER_NAME]].Commands;
+namespace [[PREFIX]].[[LAYER]].[[AREA]].[[FOLDER_NAME]].[[QC2]];
 
 [[COMMAND]]
 
-public class [[NAME]]CommandHandler : IRequestHandler<[[NAME]]Command[[RETURN2]]>
+public class [[NAME]][[QC]]Handler : IRequestHandler<[[NAME]][[QC]][[RETURN2]]>
 {{
 [[DI_PROPS]]
 
-    public [[NAME]]CommandHandler([[DI_CTOR]])
+    public [[NAME]][[QC]]Handler([[DI_CTOR]])
     {{
 [[DI_ASSIGN]]
     }}
 
-    public Task<[[RETURN]]> Handle([[NAME]]Command request, CancellationToken cancellationToken)
+    public async Task<[[RETURN]]> Handle([[NAME]][[QC]] request, CancellationToken cancellationToken)
     {{
         throw new NotImplementedException();
     }}

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace CleanArchitectureHelper;
+namespace CleanArchitectureHelper.ManagerForms;
 
 partial class DependencyInjectionManagerForm
 {
@@ -55,7 +55,7 @@ partial class DependencyInjectionManagerForm
             // SaveButton
             // 
             this.SaveButton.Animated = true;
-            this.SaveButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.SaveButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.SaveButton.BorderRadius = 1;
             this.SaveButton.BorderThickness = 1;
             this.SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -74,7 +74,7 @@ partial class DependencyInjectionManagerForm
             this.SaveButton.Location = new System.Drawing.Point(14, 466);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(323, 36);
-            this.SaveButton.TabIndex = 33;
+            this.SaveButton.TabIndex = 1;
             this.SaveButton.Text = "SAVE";
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
@@ -119,7 +119,7 @@ partial class DependencyInjectionManagerForm
             this.InterfacesTextBox.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.InterfacesTextBox.ServiceColors = ((FastColoredTextBoxNS.ServiceColors)(resources.GetObject("InterfacesTextBox.ServiceColors")));
             this.InterfacesTextBox.Size = new System.Drawing.Size(320, 361);
-            this.InterfacesTextBox.TabIndex = 31;
+            this.InterfacesTextBox.TabIndex = 0;
             this.InterfacesTextBox.Zoom = 100;
             // 
             // guna2ControlBox2
@@ -152,7 +152,7 @@ partial class DependencyInjectionManagerForm
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));

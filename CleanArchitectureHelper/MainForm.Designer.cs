@@ -72,7 +72,7 @@ partial class Form1
             // AddCommandButton
             // 
             this.AddCommandButton.Animated = true;
-            this.AddCommandButton.BorderColor = System.Drawing.Color.Gainsboro;
+            this.AddCommandButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.AddCommandButton.BorderRadius = 1;
             this.AddCommandButton.BorderThickness = 1;
             this.AddCommandButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -86,7 +86,7 @@ partial class Form1
             this.AddCommandButton.FillColor = System.Drawing.Color.WhiteSmoke;
             this.AddCommandButton.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.AddCommandButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddCommandButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.AddCommandButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.AddCommandButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.AddCommandButton.Location = new System.Drawing.Point(27, 107);
             this.AddCommandButton.Name = "AddCommandButton";
@@ -107,7 +107,7 @@ partial class Form1
             // AddQueryButton
             // 
             this.AddQueryButton.Animated = true;
-            this.AddQueryButton.BorderColor = System.Drawing.Color.Gainsboro;
+            this.AddQueryButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.AddQueryButton.BorderRadius = 1;
             this.AddQueryButton.BorderThickness = 1;
             this.AddQueryButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -121,7 +121,7 @@ partial class Form1
             this.AddQueryButton.FillColor = System.Drawing.Color.WhiteSmoke;
             this.AddQueryButton.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.AddQueryButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddQueryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.AddQueryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.AddQueryButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.AddQueryButton.Location = new System.Drawing.Point(27, 176);
             this.AddQueryButton.Name = "AddQueryButton";
@@ -161,7 +161,7 @@ partial class Form1
             // LoadProjectButton
             // 
             this.LoadProjectButton.Animated = true;
-            this.LoadProjectButton.BorderColor = System.Drawing.Color.Gainsboro;
+            this.LoadProjectButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.LoadProjectButton.BorderRadius = 1;
             this.LoadProjectButton.BorderThickness = 1;
             this.LoadProjectButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -187,7 +187,7 @@ partial class Form1
             // ProjectSettingsButton
             // 
             this.ProjectSettingsButton.Animated = true;
-            this.ProjectSettingsButton.BorderColor = System.Drawing.Color.Gainsboro;
+            this.ProjectSettingsButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.ProjectSettingsButton.BorderRadius = 1;
             this.ProjectSettingsButton.BorderThickness = 1;
             this.ProjectSettingsButton.Cursor = System.Windows.Forms.Cursors.No;
@@ -213,7 +213,7 @@ partial class Form1
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.guna2Separator1.Location = new System.Drawing.Point(27, 251);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(313, 10);
@@ -221,7 +221,7 @@ partial class Form1
             // 
             // guna2Separator2
             // 
-            this.guna2Separator2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Separator2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.guna2Separator2.Location = new System.Drawing.Point(27, 336);
             this.guna2Separator2.Name = "guna2Separator2";
             this.guna2Separator2.Size = new System.Drawing.Size(313, 10);
@@ -230,7 +230,7 @@ partial class Form1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.label2.Location = new System.Drawing.Point(138, 333);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);

@@ -111,7 +111,7 @@ partial class ProjectSettingsForm
             this.label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.label.Location = new System.Drawing.Point(55, 5);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(202, 25);
@@ -168,7 +168,7 @@ partial class ProjectSettingsForm
             // MainPathButton
             // 
             this.MainPathButton.Animated = true;
-            this.MainPathButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MainPathButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.MainPathButton.BorderThickness = 1;
             this.MainPathButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MainPathButton.CustomizableEdges.BottomLeft = false;
@@ -248,7 +248,7 @@ partial class ProjectSettingsForm
             // SaveSettingsButton
             // 
             this.SaveSettingsButton.Animated = true;
-            this.SaveSettingsButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.SaveSettingsButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.SaveSettingsButton.BorderRadius = 1;
             this.SaveSettingsButton.BorderThickness = 1;
             this.SaveSettingsButton.Cursor = System.Windows.Forms.Cursors.Hand;

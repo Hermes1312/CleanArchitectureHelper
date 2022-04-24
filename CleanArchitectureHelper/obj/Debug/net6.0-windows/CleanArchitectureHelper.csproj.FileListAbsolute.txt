@@ -20,6 +20,8 @@ E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-win
 E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.ProjectSettingsForm.resources
 E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.Form1.resources
 E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\bin\Debug\net6.0-windows\FastColoredTextBox.dll
-E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.MembersManagerForm.resources
-E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.UsingsManagerForm.resources
-E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.DependencyInjectionManagerForm.resources
+E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.AddQueryForm.resources
+E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.ManagerForms.DependencyInjectionManagerForm.resources
+E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.ManagerForms.ParametersManagerForm.resources
+E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.ManagerForms.UsingsManagerForm.resources
+E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.ManagerForms.VmPropsManagerForm.resources

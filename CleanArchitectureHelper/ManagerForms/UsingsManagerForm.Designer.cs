@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace CleanArchitectureHelper;
+namespace CleanArchitectureHelper.ManagerForms;
 
 partial class UsingsManagerForm
 {
@@ -55,7 +55,7 @@ partial class UsingsManagerForm
             // SaveButton
             // 
             this.SaveButton.Animated = true;
-            this.SaveButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.SaveButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
             this.SaveButton.BorderRadius = 1;
             this.SaveButton.BorderThickness = 1;
             this.SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -74,7 +74,7 @@ partial class UsingsManagerForm
             this.SaveButton.Location = new System.Drawing.Point(14, 467);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(323, 36);
-            this.SaveButton.TabIndex = 28;
+            this.SaveButton.TabIndex = 1;
             this.SaveButton.Text = "SAVE";
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
@@ -111,7 +111,6 @@ partial class UsingsManagerForm
             this.UsingsTextBox.CharWidth = 8;
             this.UsingsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.UsingsTextBox.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.UsingsTextBox.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.UsingsTextBox.IsReplaceMode = false;
             this.UsingsTextBox.Location = new System.Drawing.Point(17, 54);
             this.UsingsTextBox.Name = "UsingsTextBox";
@@ -119,7 +118,7 @@ partial class UsingsManagerForm
             this.UsingsTextBox.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.UsingsTextBox.ServiceColors = ((FastColoredTextBoxNS.ServiceColors)(resources.GetObject("UsingsTextBox.ServiceColors")));
             this.UsingsTextBox.Size = new System.Drawing.Size(320, 361);
-            this.UsingsTextBox.TabIndex = 25;
+            this.UsingsTextBox.TabIndex = 0;
             this.UsingsTextBox.Zoom = 100;
             // 
             // guna2ControlBox2
@@ -152,7 +151,7 @@ partial class UsingsManagerForm
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));

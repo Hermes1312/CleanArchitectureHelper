@@ -1,7 +1,6 @@
-﻿using System.Windows.Forms;
-using Guna.UI2.WinForms;
+﻿using Guna.UI2.WinForms;
 
-namespace CleanArchitectureHelper;
+namespace CleanArchitectureHelper.ManagerForms;
 
 public partial class UsingsManagerForm : Form
 {

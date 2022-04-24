@@ -1,13 +1,12 @@
-﻿using System.Windows.Forms;
-using Guna.UI2.WinForms;
+﻿using Guna.UI2.WinForms;
 
-namespace CleanArchitectureHelper;
+namespace CleanArchitectureHelper.ManagerForms;
 
-public partial class MembersManagerForm : Form
+public partial class ParametersManagerForm : Form
 {
     private List<string> _plainMembers;
 
-    public MembersManagerForm(List<string> plainMembers)
+    public ParametersManagerForm(List<string> plainMembers)
     {
         _plainMembers = plainMembers;
         InitializeComponent();

@@ -10,19 +10,25 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Update="AddCommandForm.cs">
+      <Compile Update="ManagerForms\VmPropsManagerForm.cs">
         <SubType>Form</SubType>
       </Compile>
       <Compile Update="ProjectSettingsForm.cs">
         <SubType>Form</SubType>
       </Compile>
-      <Compile Update="MembersManagerForm.cs">
+      <Compile Update="ManagerForms\ParametersManagerForm.cs">
         <SubType>Form</SubType>
       </Compile>
-      <Compile Update="UsingsManagerForm.cs">
+      <Compile Update="AddCommandForm.cs">
         <SubType>Form</SubType>
       </Compile>
-      <Compile Update="DependencyInjectionManagerForm.cs">
+      <Compile Update="ManagerForms\UsingsManagerForm.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="ManagerForms\DependencyInjectionManagerForm.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="AddQueryForm.cs">
         <SubType>Form</SubType>
       </Compile>
     </ItemGroup>
