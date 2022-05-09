@@ -103,8 +103,8 @@ partial class ParametersManagerForm
             this.membersTextBox.CharWidth = 8;
             this.membersTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.membersTextBox.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.membersTextBox.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.membersTextBox.IsReplaceMode = false;
+            this.membersTextBox.Language = FastColoredTextBoxNS.Language.CSharp;
             this.membersTextBox.Location = new System.Drawing.Point(15, 53);
             this.membersTextBox.Name = "membersTextBox";
             this.membersTextBox.Paddings = new System.Windows.Forms.Padding(0);

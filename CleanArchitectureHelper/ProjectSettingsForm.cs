@@ -1,51 +1,22 @@
 ﻿using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Windows.Forms;
 using Guna.UI2.WinForms;
-using Timer = System.Windows.Forms.Timer;
 
 namespace CleanArchitectureHelper;
 
 public partial class ProjectSettingsForm : Form
 {
-    private readonly ProjectModel? _projectModel;
-    private readonly Timer? _timer;
-    private const short Timeout = 4;
-    private short _tickCounter = 0;
+    public ProjectSettingsForm(bool firstTime = false) 
+        => InitializeComponent();
 
-    public ProjectSettingsForm(bool firstTime=false)
+    private void ProjectSettingsForm_Load(object sender, EventArgs e)
     {
-        InitializeComponent();
         label.Text = Globals.ProjectModel?.Prefix + " settings";
 
-        if (firstTime)
-        {
-            _timer = new Timer();
-            _timer.Interval = 1000;
-            _timer.Tick += TimerOnTick;
-            _timer.Start();
+        if (Globals.ProjectModel == null) return;
 
-            SaveSettingsButton.Text = (Timeout + 1).ToString();
-        }
-
-        _projectModel = Globals.ProjectModel;
-        if (_projectModel == null) return;
-        
-        mainPathTextBox.Text = _projectModel.Path;
-        nameTextBox.Text = _projectModel.Prefix;
-    }
-
-    private void TimerOnTick(object? sender, EventArgs e)
-    {
-        SaveSettingsButton.Text = (Timeout - _tickCounter).ToString();
-        
-        if (_tickCounter > Timeout)
-        {
-            SaveSettingsButton.Text = "SAVE SETTINGS";
-            _timer.Stop();
-        }
-
-        _tickCounter++;
+        mainPathTextBox.Text = Globals.ProjectModel.Path;
+        nameTextBox.Text = Globals.ProjectModel.Prefix;
+        BinPathTextBox.Text = Globals.ProjectModel.AssembliesPath;
     }
 
     private void MainPathButton_Click(object sender, EventArgs e)
@@ -63,22 +34,18 @@ public partial class ProjectSettingsForm : Form
         nameTextBox.Text = split[^1][..^4];
     }
 
-    private void SaveSettingsButton_MouseEnter(object sender, EventArgs e) 
-        => SaveSettingsButton.Cursor = _tickCounter >= Timeout ? Cursors.Hand : Cursors.No;
-
     private void SaveSettingsButton_Click(object sender, EventArgs e)
     {
-        if(_timer != null && _tickCounter <= Timeout) return;
-        
-        _projectModel.Path = mainPathTextBox.Text;
-        _projectModel.Prefix = nameTextBox.Text;
+        Globals.ProjectModel!.Path = mainPathTextBox.Text;
+        Globals.ProjectModel.Prefix = nameTextBox.Text;
+        Globals.ProjectModel.AssembliesPath = BinPathTextBox.Text;
 
-        var fileNameLength = _projectModel.Path.Split("\\")[^1].Length;
-        var path = _projectModel.Path[..^fileNameLength];
-        _projectModel.Areas = Directory.GetDirectories(path, $"{_projectModel.Prefix}.Infrastructure.*").Select(d => d.Split("\\")[^1].Split(".")[^1]).ToList();
+        var fileNameLength = Globals.ProjectModel.Path.Split("\\")[^1].Length;
+        var path = Globals.ProjectModel.Path[..^fileNameLength];
+        Globals.ProjectModel.Areas = Directory.GetDirectories(path, $"{Globals.ProjectModel.Prefix}.Infrastructure.*").Select(d => d.Split("\\")[^1].Split(".")[^1]).ToList();
         
-        var json = JsonSerializer.Serialize(_projectModel);
-        var settingsPath = _projectModel.Name + ".json";
+        var json = JsonSerializer.Serialize(Globals.ProjectModel);
+        var settingsPath = Globals.ProjectModel.Name + ".json";
         
         
         File.WriteAllText(settingsPath, json);
@@ -96,4 +63,15 @@ public partial class ProjectSettingsForm : Form
 
         Close();
     }
+
+    private void BinPathButton_Click(object sender, EventArgs e)
+    {
+        var folderBrowserDialog = new FolderBrowserDialog();
+
+        if (folderBrowserDialog.ShowDialog() != DialogResult.OK) return;
+
+        BinPathTextBox.Text = folderBrowserDialog.SelectedPath;
+    }
+
+
 }

@@ -50,6 +50,7 @@ partial class DependencyInjectionManagerForm
             this.guna2BorderlessForm1.BorderRadius = 2;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.ResizeForm = false;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // SaveButton
@@ -111,7 +112,6 @@ partial class DependencyInjectionManagerForm
             this.InterfacesTextBox.CharWidth = 8;
             this.InterfacesTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.InterfacesTextBox.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.InterfacesTextBox.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.InterfacesTextBox.IsReplaceMode = false;
             this.InterfacesTextBox.Location = new System.Drawing.Point(17, 53);
             this.InterfacesTextBox.Name = "InterfacesTextBox";
@@ -179,6 +179,8 @@ partial class DependencyInjectionManagerForm
             this.Name = "DependencyInjectionManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dependency Injection Manager";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DependencyInjectionManagerForm_FormClosed);
+            this.Load += new System.EventHandler(this.DependencyInjectionManagerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InterfacesTextBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

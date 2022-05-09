@@ -2,7 +2,7 @@
 
 namespace CleanArchitectureHelper.ManagerForms;
 
-partial class VmPropsManagerForm
+partial class IncludesManagerForm
 {
     /// <summary>
     /// Required designer variable.
@@ -35,12 +35,11 @@ partial class VmPropsManagerForm
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.propsTextBox = new FastColoredTextBoxNS.FastColoredTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.saveButton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.propsTextBox)).BeginInit();
+            this.IncludablesListBox = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -61,7 +60,7 @@ partial class VmPropsManagerForm
             this.guna2ControlBox2.FillColor = System.Drawing.SystemColors.ControlLightLight;
             this.guna2ControlBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.guna2ControlBox2.Location = new System.Drawing.Point(563, 0);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(192, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 27);
             this.guna2ControlBox2.TabIndex = 14;
@@ -74,49 +73,11 @@ partial class VmPropsManagerForm
             this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.ControlLightLight;
             this.guna2ControlBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.guna2ControlBox1.Location = new System.Drawing.Point(608, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(237, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 27);
             this.guna2ControlBox1.TabIndex = 13;
             this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
-            // 
-            // propsTextBox
-            // 
-            this.propsTextBox.AutoCompleteBracketsList = new char[] {
-        '(',
-        ')',
-        '{',
-        '}',
-        '[',
-        ']',
-        '\"',
-        '\"',
-        '\'',
-        '\''};
-            this.propsTextBox.AutoIndentCharsPatterns = "\r\n^\\s*[\\w\\.]+(\\s\\w+)?\\s*(?<range>=)\\s*(?<range>[^;=]+);\r\n^\\s*(case|default)\\s*[^:" +
-    "]*(?<range>:)\\s*(?<range>[^;]+);\r\n";
-            this.propsTextBox.AutoScrollMinSize = new System.Drawing.Size(27, 14);
-            this.propsTextBox.BackBrush = null;
-            this.propsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.propsTextBox.BracketsHighlightStrategy = FastColoredTextBoxNS.BracketsHighlightStrategy.Strategy2;
-            this.propsTextBox.CharHeight = 14;
-            this.propsTextBox.CharWidth = 8;
-            this.propsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.propsTextBox.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.propsTextBox.IsReplaceMode = false;
-            this.propsTextBox.Language = FastColoredTextBoxNS.Language.CSharp;
-            this.propsTextBox.LeftBracket = '(';
-            this.propsTextBox.LeftBracket2 = '{';
-            this.propsTextBox.Location = new System.Drawing.Point(15, 53);
-            this.propsTextBox.Name = "propsTextBox";
-            this.propsTextBox.Paddings = new System.Windows.Forms.Padding(0);
-            this.propsTextBox.RightBracket = ')';
-            this.propsTextBox.RightBracket2 = '}';
-            this.propsTextBox.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.propsTextBox.ServiceColors = null;
-            this.propsTextBox.Size = new System.Drawing.Size(629, 361);
-            this.propsTextBox.TabIndex = 0;
-            this.propsTextBox.Zoom = 100;
             // 
             // label1
             // 
@@ -161,7 +122,7 @@ partial class VmPropsManagerForm
             this.saveButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.saveButton.Location = new System.Drawing.Point(12, 469);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(632, 36);
+            this.saveButton.Size = new System.Drawing.Size(258, 36);
             this.saveButton.TabIndex = 1;
             this.saveButton.Text = "SAVE";
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
@@ -176,29 +137,36 @@ partial class VmPropsManagerForm
             this.label8.Location = new System.Drawing.Point(12, 0);
             this.label8.Name = "label8";
             this.label8.Padding = new System.Windows.Forms.Padding(25, 7, 25, 7);
-            this.label8.Size = new System.Drawing.Size(159, 29);
+            this.label8.Size = new System.Drawing.Size(152, 29);
             this.label8.TabIndex = 38;
-            this.label8.Text = "VM Props Manager";
+            this.label8.Text = "Includes Manager";
             // 
-            // VmPropsManagerForm
+            // IncludablesListBox
+            // 
+            this.IncludablesListBox.FormattingEnabled = true;
+            this.IncludablesListBox.Location = new System.Drawing.Point(15, 66);
+            this.IncludablesListBox.Name = "IncludablesListBox";
+            this.IncludablesListBox.Size = new System.Drawing.Size(255, 328);
+            this.IncludablesListBox.TabIndex = 39;
+            // 
+            // IncludesManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(656, 517);
+            this.ClientSize = new System.Drawing.Size(285, 517);
+            this.Controls.Add(this.IncludablesListBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.propsTextBox);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "VmPropsManagerForm";
+            this.Name = "IncludesManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VM Props Manager";
-            this.Load += new System.EventHandler(this.VmPropsManagerForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.propsTextBox)).EndInit();
+            this.Load += new System.EventHandler(this.IncludesManagerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,9 +177,9 @@ partial class VmPropsManagerForm
     private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
     private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-    private FastColoredTextBoxNS.FastColoredTextBox propsTextBox;
     private Label label2;
     private Label label1;
     private Guna.UI2.WinForms.Guna2GradientButton saveButton;
     private Label label8;
+    private CheckedListBox IncludablesListBox;
 }

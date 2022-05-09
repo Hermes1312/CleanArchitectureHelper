@@ -14,8 +14,7 @@ public partial class AddQueryForm : Form
     public AddQueryForm()
     {
         InitializeComponent();
-        
-        AreasComboBox.Items.AddRange(Globals.ProjectModel!.Areas.ToArray());
+ 
     }
 
     private void ManageMembersButton_Click(object sender, EventArgs e) => new ParametersManagerForm(_plainParameters).ShowDialog();
@@ -23,9 +22,29 @@ public partial class AddQueryForm : Form
     private void ManageUsingsButton_Click(object sender, EventArgs e) => new UsingsManagerForm(_plainUsings).ShowDialog();
 
     private void ManageInterfacesButton_Click(object sender, EventArgs e) => new DependencyInjectionManagerForm(_plainInterfaces).ShowDialog();
+    
+    private void ManageVmPropsButton_Click(object sender, EventArgs e) => new VmPropsManagerForm(_plainVmProps, EntitiesComboBox.Text).ShowDialog();
 
+    private void AddQueryForm_Load(object sender, EventArgs e)
+    {
+        AreasComboBox.Items.AddRange(Globals.ProjectModel!.Areas.ToArray());
+        EntitiesComboBox.Items.AddRange(Globals.GetEntitiesNames().ToArray());
+    }
 
-    private void ManageVmPropsButton_Click(object sender, EventArgs e) => new VmPropsManagerForm(_plainVmProps).ShowDialog();
+    private void EntitiesComboBox_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (EntitiesComboBox.Text == "-")
+        {
+            _plainVmProps.Clear();
+            return;
+        }
+        
+        _plainVmProps.Clear(); 
+        _plainVmProps.AddRange(Globals.GetEntityProperties(EntitiesComboBox.Text));
+    }
+
+    private void ManageIncludesButton_Click(object sender, EventArgs e)
+    => new IncludesManagerForm(EntitiesComboBox.Text).ShowDialog();
 
     private void PaginatedListCheckBox_CheckedChanged(object sender, EventArgs e)
     {
@@ -37,45 +56,45 @@ public partial class AddQueryForm : Form
 
     private void AddQueryButton_Click(object sender, EventArgs e)
     {
-        new Guna2MessageDialog()
+        try
         {
-            Buttons = MessageDialogButtons.OK,
-            Caption = "Chuj",
-            Icon = MessageDialogIcon.Information,
-            Parent = this,
-            Style = MessageDialogStyle.Light,
-            Text = "Juz mnie sie nie chciało! END"
-        }.Show();
-        
-        // var dir = $"{Globals.ProjectModel!.DirectoryPath}\\{Globals.ProjectModel.Prefix}.Application.{AreasComboBox.Text}\\{FolderNameTextBox.Text}\\Commands\\";
-        // if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
-        // var path = $"{dir}{NameTextBox.Text}CommandHandler.cs";
-        // File.WriteAllText(path, QueryHandlerTextBox.Text);
-        //
-        // if (File.Exists(path))
-        // {
-        //     new Guna2MessageDialog()
-        //     {
-        //         Buttons = MessageDialogButtons.OK,
-        //         Caption = "Succeed",
-        //         Icon = MessageDialogIcon.Information,
-        //         Parent = this,
-        //         Style = MessageDialogStyle.Light,
-        //         Text = "Successfully added new query! END"
-        //     }.Show();
-        // }
-        // else
-        // {
-        //     new Guna2MessageDialog()
-        //     {
-        //         Buttons = MessageDialogButtons.OK,
-        //         Caption = "Error",
-        //         Icon = MessageDialogIcon.Error,
-        //         Parent = this,
-        //         Style = MessageDialogStyle.Light,
-        //         Text = "Something went wrong! END"
-        //     }.Show();
-        // }
+            var queryDir =
+                $"{Globals.ProjectModel!.DirectoryPath}\\{Globals.ProjectModel.Prefix}.Application.{AreasComboBox.Text}\\{FolderNameTextBox.Text}\\Queries\\";
+            if (!Directory.Exists(queryDir)) Directory.CreateDirectory(queryDir);
+
+            var handlerDir =
+                $"{Globals.ProjectModel!.DirectoryPath}\\{Globals.ProjectModel.Prefix}.Infrastructure.{AreasComboBox.Text}\\{FolderNameTextBox.Text}\\Queries\\";
+            if (!Directory.Exists(handlerDir)) Directory.CreateDirectory(handlerDir);
+
+            var queryPath = $"{queryDir}{NameTextBox.Text}Query.cs";
+            File.WriteAllText(queryPath, QueryVmTextBox.Text);
+
+            var handlerPath = $"{handlerDir}{NameTextBox.Text}QueryHandler.cs";
+            File.WriteAllText(handlerPath, QueryHandlerTextBox.Text);
+
+
+            new Guna2MessageDialog()
+            {
+                Buttons = MessageDialogButtons.OK,
+                Caption = "Succeed",
+                Icon = MessageDialogIcon.Information,
+                Parent = this,
+                Style = MessageDialogStyle.Light,
+                Text = "Successfully added new query! END"
+            }.Show();
+        }
+        catch (Exception)
+        {
+            new Guna2MessageDialog()
+            {
+                Buttons = MessageDialogButtons.OK,
+                Caption = "Error",
+                Icon = MessageDialogIcon.Error,
+                Parent = this,
+                Style = MessageDialogStyle.Light,
+                Text = "Something went wrong! END"
+            }.Show();
+        }
     }
 
 
@@ -161,7 +180,9 @@ public partial class AddQueryForm : Form
         handlerCode = handlerCode.Replace("[[NAME]]", NameTextBox.Text);
         handlerCode = handlerCode.Replace("[[RETURN]]", returnType);
         handlerCode = handlerCode.Replace("[[RETURN2]]", ", "+returnType);
-
+        
+        if(GenerateHandlerCheckBox.Checked)
+        
         #endregion
 
         QueryHandlerTextBox.Text = handlerCode;

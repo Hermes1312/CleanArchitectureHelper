@@ -13,5 +13,6 @@ public class ProjectModel
             return string.Join("\\", split);
         }
     }
+    public string AssembliesPath { get; set; } = null!;
     public List<string>? Areas { get; set; } = new();
 }

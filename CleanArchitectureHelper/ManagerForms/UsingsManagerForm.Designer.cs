@@ -111,7 +111,9 @@ partial class UsingsManagerForm
             this.UsingsTextBox.CharWidth = 8;
             this.UsingsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.UsingsTextBox.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.UsingsTextBox.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.UsingsTextBox.IsReplaceMode = false;
+            this.UsingsTextBox.Language = FastColoredTextBoxNS.Language.CSharp;
             this.UsingsTextBox.Location = new System.Drawing.Point(17, 54);
             this.UsingsTextBox.Name = "UsingsTextBox";
             this.UsingsTextBox.Paddings = new System.Windows.Forms.Padding(0);

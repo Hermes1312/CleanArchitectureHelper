@@ -1,0 +1,14 @@
+﻿[Validation]
+
+[Saved previous manager's configuration like in GIMP]
+
+[Pattern for handlers]
+-Get all entities and map to QueryVM
+-Same as above but returns paginated list
+
+[Automatically write usings]
+
+[Create entity (optional: add DbSet and add then apply migration)]
+
+[Intellisense in Managers with detected types autocomplete]
+-DI Completed

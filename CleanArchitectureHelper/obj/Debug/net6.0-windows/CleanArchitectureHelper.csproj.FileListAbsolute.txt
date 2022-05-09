@@ -2,7 +2,6 @@ E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\bin\Debug\net6.0-win
 E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\bin\Debug\net6.0-windows\CleanArchitectureHelper.deps.json
 E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\bin\Debug\net6.0-windows\CleanArchitectureHelper.runtimeconfig.json
 E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\bin\Debug\net6.0-windows\CleanArchitectureHelper.dll
-E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\bin\Debug\net6.0-windows\ref\CleanArchitectureHelper.dll
 E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\bin\Debug\net6.0-windows\CleanArchitectureHelper.pdb
 E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.csproj.AssemblyReference.cache
 E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.csproj.GenerateResource.cache
@@ -25,3 +24,7 @@ E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-win
 E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.ManagerForms.ParametersManagerForm.resources
 E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.ManagerForms.UsingsManagerForm.resources
 E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.ManagerForms.VmPropsManagerForm.resources
+E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\refint\CleanArchitectureHelper.dll
+E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\obj\Debug\net6.0-windows\CleanArchitectureHelper.ManagerForms.IncludesManagerForm.resources
+E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+E:\Projekty\CleanArchitectureHelper\CleanArchitectureHelper\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll

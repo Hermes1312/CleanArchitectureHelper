@@ -62,6 +62,10 @@ partial class AddQueryForm
             this.PaginatedListCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ManageVmPropsButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.EntitiesComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.GenerateHandlerCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.ManageIncludesButton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QueryHandlerTextBox)).BeginInit();
@@ -156,6 +160,7 @@ partial class AddQueryForm
             this.AreasComboBox.Name = "AreasComboBox";
             this.AreasComboBox.Size = new System.Drawing.Size(162, 36);
             this.AreasComboBox.TabIndex = 18;
+            this.AreasComboBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // GenerateCommandButton
             // 
@@ -260,7 +265,7 @@ partial class AddQueryForm
             this.CtorParametersCheckBox.CheckedState.BorderThickness = 0;
             this.CtorParametersCheckBox.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CtorParametersCheckBox.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CtorParametersCheckBox.Location = new System.Drawing.Point(33, 648);
+            this.CtorParametersCheckBox.Location = new System.Drawing.Point(36, 648);
             this.CtorParametersCheckBox.Name = "CtorParametersCheckBox";
             this.CtorParametersCheckBox.Size = new System.Drawing.Size(229, 23);
             this.CtorParametersCheckBox.TabIndex = 28;
@@ -477,10 +482,11 @@ partial class AddQueryForm
         '\"',
         '\'',
         '\''};
-            this.QueryVmTextBox.AutoIndentCharsPatterns = "^\\s*[\\w\\.]+(\\s\\w+)?\\s*(?<range>=)\\s*(?<range>[^;=]+);\r\n^\\s*(case|default)\\s*[^:]*" +
-    "(?<range>:)\\s*(?<range>[^;]+);";
-            this.QueryVmTextBox.AutoScrollMinSize = new System.Drawing.Size(27, 14);
+            this.QueryVmTextBox.AutoIndentCharsPatterns = "\r\n^\\s*[\\w\\.]+(\\s\\w+)?\\s*(?<range>=)\\s*(?<range>[^;=]+);\r\n^\\s*(case|default)\\s*[^:" +
+    "]*(?<range>:)\\s*(?<range>[^;]+);\r\n";
+            this.QueryVmTextBox.AutoScrollMinSize = new System.Drawing.Size(2, 14);
             this.QueryVmTextBox.BackBrush = null;
+            this.QueryVmTextBox.BracketsHighlightStrategy = FastColoredTextBoxNS.BracketsHighlightStrategy.Strategy2;
             this.QueryVmTextBox.CharHeight = 14;
             this.QueryVmTextBox.CharWidth = 8;
             this.QueryVmTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -489,9 +495,13 @@ partial class AddQueryForm
             this.QueryVmTextBox.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.QueryVmTextBox.IsReplaceMode = false;
             this.QueryVmTextBox.Language = FastColoredTextBoxNS.Language.CSharp;
+            this.QueryVmTextBox.LeftBracket = '(';
+            this.QueryVmTextBox.LeftBracket2 = '{';
             this.QueryVmTextBox.Location = new System.Drawing.Point(3, 3);
             this.QueryVmTextBox.Name = "QueryVmTextBox";
             this.QueryVmTextBox.Paddings = new System.Windows.Forms.Padding(0);
+            this.QueryVmTextBox.RightBracket = ')';
+            this.QueryVmTextBox.RightBracket2 = '}';
             this.QueryVmTextBox.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.QueryVmTextBox.ServiceColors = ((FastColoredTextBoxNS.ServiceColors)(resources.GetObject("QueryVmTextBox.ServiceColors")));
             this.QueryVmTextBox.Size = new System.Drawing.Size(841, 376);
@@ -506,7 +516,7 @@ partial class AddQueryForm
             this.PaginatedListCheckBox.CheckedState.BorderThickness = 0;
             this.PaginatedListCheckBox.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.PaginatedListCheckBox.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.PaginatedListCheckBox.Location = new System.Drawing.Point(291, 648);
+            this.PaginatedListCheckBox.Location = new System.Drawing.Point(282, 648);
             this.PaginatedListCheckBox.Name = "PaginatedListCheckBox";
             this.PaginatedListCheckBox.Size = new System.Drawing.Size(116, 23);
             this.PaginatedListCheckBox.TabIndex = 38;
@@ -553,12 +563,92 @@ partial class AddQueryForm
             this.ManageVmPropsButton.Text = "MANAGE VM PROPS";
             this.ManageVmPropsButton.Click += new System.EventHandler(this.ManageVmPropsButton_Click);
             // 
+            // EntitiesComboBox
+            // 
+            this.EntitiesComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.EntitiesComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.EntitiesComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.EntitiesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EntitiesComboBox.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.EntitiesComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.EntitiesComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.EntitiesComboBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EntitiesComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.EntitiesComboBox.ItemHeight = 30;
+            this.EntitiesComboBox.Items.AddRange(new object[] {
+            "-"});
+            this.EntitiesComboBox.Location = new System.Drawing.Point(577, 593);
+            this.EntitiesComboBox.Name = "EntitiesComboBox";
+            this.EntitiesComboBox.Size = new System.Drawing.Size(162, 36);
+            this.EntitiesComboBox.StartIndex = 0;
+            this.EntitiesComboBox.TabIndex = 41;
+            this.EntitiesComboBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.EntitiesComboBox.SelectedIndexChanged += new System.EventHandler(this.EntitiesComboBox_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(577, 571);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(106, 19);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "VM From entity";
+            // 
+            // GenerateHandlerCheckBox
+            // 
+            this.GenerateHandlerCheckBox.AutoSize = true;
+            this.GenerateHandlerCheckBox.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GenerateHandlerCheckBox.CheckedState.BorderRadius = 0;
+            this.GenerateHandlerCheckBox.CheckedState.BorderThickness = 0;
+            this.GenerateHandlerCheckBox.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GenerateHandlerCheckBox.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.GenerateHandlerCheckBox.Location = new System.Drawing.Point(425, 648);
+            this.GenerateHandlerCheckBox.Name = "GenerateHandlerCheckBox";
+            this.GenerateHandlerCheckBox.Size = new System.Drawing.Size(135, 23);
+            this.GenerateHandlerCheckBox.TabIndex = 43;
+            this.GenerateHandlerCheckBox.Text = "Generate handler";
+            this.GenerateHandlerCheckBox.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.GenerateHandlerCheckBox.UncheckedState.BorderRadius = 0;
+            this.GenerateHandlerCheckBox.UncheckedState.BorderThickness = 1;
+            this.GenerateHandlerCheckBox.UncheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
+            // 
+            // ManageIncludesButton
+            // 
+            this.ManageIncludesButton.Animated = true;
+            this.ManageIncludesButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(164)))), ((int)(((byte)(183)))));
+            this.ManageIncludesButton.BorderRadius = 1;
+            this.ManageIncludesButton.BorderThickness = 1;
+            this.ManageIncludesButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ManageIncludesButton.CustomizableEdges.BottomLeft = false;
+            this.ManageIncludesButton.CustomizableEdges.TopRight = false;
+            this.ManageIncludesButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ManageIncludesButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ManageIncludesButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ManageIncludesButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ManageIncludesButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ManageIncludesButton.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.ManageIncludesButton.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.ManageIncludesButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ManageIncludesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.ManageIncludesButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.ManageIncludesButton.Location = new System.Drawing.Point(577, 635);
+            this.ManageIncludesButton.Name = "ManageIncludesButton";
+            this.ManageIncludesButton.Size = new System.Drawing.Size(162, 36);
+            this.ManageIncludesButton.TabIndex = 44;
+            this.ManageIncludesButton.Text = "MANAGE INCLUDES";
+            this.ManageIncludesButton.Click += new System.EventHandler(this.ManageIncludesButton_Click);
+            // 
             // AddQueryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(908, 683);
+            this.Controls.Add(this.ManageIncludesButton);
+            this.Controls.Add(this.GenerateHandlerCheckBox);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.EntitiesComboBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ManageVmPropsButton);
             this.Controls.Add(this.PaginatedListCheckBox);
@@ -587,6 +677,7 @@ partial class AddQueryForm
             this.Name = "AddQueryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Query";
+            this.Load += new System.EventHandler(this.AddQueryForm_Load);
             this.guna2TabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.QueryHandlerTextBox)).EndInit();
@@ -628,4 +719,8 @@ partial class AddQueryForm
     private Guna.UI2.WinForms.Guna2GradientButton ManageVmPropsButton;
     private FastColoredTextBoxNS.FastColoredTextBox QueryHandlerTextBox;
     private FastColoredTextBoxNS.FastColoredTextBox QueryVmTextBox;
+    private Label label9;
+    private Guna.UI2.WinForms.Guna2ComboBox EntitiesComboBox;
+    private Guna.UI2.WinForms.Guna2CheckBox GenerateHandlerCheckBox;
+    private Guna.UI2.WinForms.Guna2GradientButton ManageIncludesButton;
 }
