@@ -9,6 +9,3 @@
 [Automatically write usings]
 
 [Create entity (optional: add DbSet and add then apply migration)]
-
-[Intellisense in Managers with detected types autocomplete]
--DI Completed

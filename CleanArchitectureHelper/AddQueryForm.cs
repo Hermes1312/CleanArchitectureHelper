@@ -185,7 +185,8 @@ public partial class AddQueryForm : Form
         
         #endregion
 
-        QueryHandlerTextBox.Text = handlerCode;
+        QueryHandlerTextBox.Clear(); 
+        QueryHandlerTextBox.AppendText(handlerCode); 
         QueryVmTextBox.Text = queryCode+Environment.NewLine+Environment.NewLine+vmCode;
     }
 }

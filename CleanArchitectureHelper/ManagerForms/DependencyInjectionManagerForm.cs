@@ -40,7 +40,7 @@ public partial class DependencyInjectionManagerForm : Form
     {
         Focus();
 
-        var files = Directory.GetFiles(@"E:\Projekty\WinePassionWebApp\WinePassion.API\bin\Debug\net6.0\", "WinePassion*.dll");
+        var files = Directory.GetFiles(Globals.ProjectModel.AssembliesPath, $"{Globals.ProjectModel.Prefix}*.dll");
         var interfaces = new List<string>();
 
         foreach (var file in files)

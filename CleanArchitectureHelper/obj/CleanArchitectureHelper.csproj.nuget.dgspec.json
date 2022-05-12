@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projekty\\CleanArchitectureHelper\\CleanArchitectureHelper\\CleanArchitectureHelper.csproj": {}
+    "D:\\Projekty\\CleanArchitectureHelper\\CleanArchitectureHelper\\CleanArchitectureHelper.csproj": {}
   },
   "projects": {
-    "E:\\Projekty\\CleanArchitectureHelper\\CleanArchitectureHelper\\CleanArchitectureHelper.csproj": {
+    "D:\\Projekty\\CleanArchitectureHelper\\CleanArchitectureHelper\\CleanArchitectureHelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projekty\\CleanArchitectureHelper\\CleanArchitectureHelper\\CleanArchitectureHelper.csproj",
+        "projectUniqueName": "D:\\Projekty\\CleanArchitectureHelper\\CleanArchitectureHelper\\CleanArchitectureHelper.csproj",
         "projectName": "CleanArchitectureHelper",
-        "projectPath": "E:\\Projekty\\CleanArchitectureHelper\\CleanArchitectureHelper\\CleanArchitectureHelper.csproj",
-        "packagesPath": "C:\\Users\\Hermes\\.nuget\\packages\\",
-        "outputPath": "E:\\Projekty\\CleanArchitectureHelper\\CleanArchitectureHelper\\obj\\",
+        "projectPath": "D:\\Projekty\\CleanArchitectureHelper\\CleanArchitectureHelper\\CleanArchitectureHelper.csproj",
+        "packagesPath": "C:\\Users\\cetuspro\\.nuget\\packages\\",
+        "outputPath": "D:\\Projekty\\CleanArchitectureHelper\\CleanArchitectureHelper\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Hermes\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\cetuspro\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,7 +65,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300-preview.22204.3\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

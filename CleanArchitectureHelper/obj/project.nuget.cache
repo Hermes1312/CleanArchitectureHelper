@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "9/mqkOdUD9WhMdvW0rW49SAjXOS+8MJS1OvjeTfBQMTg+pttRqXGae9z+plvcJbJTwadn32cgkt5DS6VgQ8yJg==",
+  "dgSpecHash": "REwW9Gaq3m7WxI5xqLlMTT/099Vkutqv37Y9fjSRbrN9llGqcvUIn6bNtDi+0nku1CFMc+TL9cEuK9EDgmkOAQ==",
   "success": true,
-  "projectFilePath": "E:\\Projekty\\CleanArchitectureHelper\\CleanArchitectureHelper\\CleanArchitectureHelper.csproj",
+  "projectFilePath": "D:\\Projekty\\CleanArchitectureHelper\\CleanArchitectureHelper\\CleanArchitectureHelper.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Hermes\\.nuget\\packages\\fastcoloredtextbox.net5\\2.16.26\\fastcoloredtextbox.net5.2.16.26.nupkg.sha512",
-    "C:\\Users\\Hermes\\.nuget\\packages\\guna.ui2.winforms\\2.0.3.2\\guna.ui2.winforms.2.0.3.2.nupkg.sha512"
+    "C:\\Users\\cetuspro\\.nuget\\packages\\fastcoloredtextbox.net5\\2.16.26\\fastcoloredtextbox.net5.2.16.26.nupkg.sha512",
+    "C:\\Users\\cetuspro\\.nuget\\packages\\guna.ui2.winforms\\2.0.3.2\\guna.ui2.winforms.2.0.3.2.nupkg.sha512"
   ],
   "logs": [
     {
